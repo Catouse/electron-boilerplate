@@ -1,0 +1,124 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.user-selectable {
+  -webkit-user-select: initial;
+  user-select: initial;
+}
+
+.user-app-dragable {
+  -webkit-app-region: drag;
+}
+
+.user-app-no-dragable {
+  -webkit-app-region: no-drag;
+}
+
+
+@caret-width-base: (4*@rem);
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  margin-bottom: 2px; // Fix vertical aligment
+  vertical-align: middle;
+  border-top:   @caret-width-base dashed;
+  border-top:   @caret-width-base solid ~"\9"; // IE8
+  border-right: @caret-width-base solid transparent;
+  border-left:  @caret-width-base solid transparent;
+}
+
+
+.navbar {
+  width: 100%;
+  background-color: @color-gray-light;
+  border-bottom: @color-primary solid (1*@rem);
+  padding: 0 (1*@rem);
+  height: (30*@rem);
+
+  > a {
+    min-width: (100*@rem);
+  }
+
+  > .active {
+    color: @color-primary;
+  }
+}
+
+.iconbutton {
+
+  .avatar {
+    position: relative;
+    overflow: visible;
+
+    > .icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      overflow: hidden;
+      .center-content();
+    }
+
+    &.rounded > .icon {
+      border-radius: @border-radius-base;
+    }
+  }
+
+  .short-icon {
+    width: (12*@rem);
+    height: (12*@rem);
+    line-height: (12*@rem);
+    text-align: center;
+    position: absolute;
+    left: (-4*@rem);
+    bottom: (-4*@rem);
+    background-color: @color-secondary;
+    text-shadow: none;
+    border-radius: (7*@rem);
+  }
+}
+
+.toolbox {
+  .btn + .btn {
+    margin-left: (10*@rem);
+  }
+}
+
+.panel {
+  border: @border-color (@border-width) solid;
+  background: @color-white;
+
+  > .heading {
+    background: #ddd;
+    flex: none;
+
+    > .title {
+      padding: @space-xs;
+    }
+  }
+
+  + .panel:not(.no-margin) {
+    margin-top: @space-sm;
+  }
+
+  > .content {
+    flex: auto;
+  }
+
+  > .footer {
+    flex: none;
+  }
+}

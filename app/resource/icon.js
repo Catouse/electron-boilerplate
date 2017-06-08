@@ -1,0 +1,21 @@
+export default {
+    'copy'               : 'content-copy',
+    'paste'              : 'content-paste',
+    'cut'                : 'content-cut mdi-rotate-270',
+    'delete'             : 'delete',
+    'save'               : 'content-save',
+    'protocol'           : 'parking',
+    'variable'           : 'alpha',
+    'dataSourceGroup'    : 'google-circles-extended',
+    'dataSource'         : 'database-plus',
+    'caseGroup'          : 'library-plus',
+    'case'               : 'note-plus-outline',
+    'binaryStruct'       : 'cube-unfolded',
+    'textStruct'         : 'note-text',
+    'binaryPacket'       : 'zip-box',
+    'textPacket'         : 'file-document-box',
+    'options'            : 'table',
+    'action'             : 'human-handsdown',
+    'server'             : 'server-network',
+    'serverOffline'      : 'server-network-off'
+};
